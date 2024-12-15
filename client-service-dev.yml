@@ -41,7 +41,7 @@ resilience4j:
     configs:
       retry-product:
         maxAttempts: 5
-        waitDuration: 2000
+        waitDuration: 200
         enableExponentialBackoff: true
         exponentialBackoffMultiplier: 2
     instances:
