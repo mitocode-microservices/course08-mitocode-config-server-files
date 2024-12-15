@@ -50,4 +50,6 @@ otel:
 logging:
   level:
     root: INFO
-    com.mitocode.microservices: TRACE
+    com:
+      mitocode:
+        microservices: ALL
