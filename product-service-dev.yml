@@ -52,4 +52,4 @@ logging:
     root: INFO
     com:
       mitocode:
-        microservices: ALL
+        microservices: TRACE
