@@ -31,3 +31,23 @@ springdoc:
   swagger-ui:
     enabled: false
     path: /openapi.yml
+
+otel:
+  logs:
+    exporter: otlp
+  metrics:
+    exporter: otlp
+  traces:
+    exporter: otlp
+
+  metric:
+    export:
+      interval: 5000
+  instrumentation:
+    micrometer:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
+    com.mitocode.microservices: TRACE
