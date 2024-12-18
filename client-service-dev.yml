@@ -59,4 +59,17 @@ mitocode:
         slowCallDurationThreshold: 2000
         slowCallRateThreshold: 80     
 
+# OpenTelemetry Configuration
+
+management:
+  otlp:
+    tracing:
+      endpoint: http://localhost:4318/v1/traces
+      timeout: 10s
+    metrics:
+      exportes:
+        url: http://localhost:4318/v1/metrics
+        step: 5s
+  opentelemetry:
+    resourceAttributes."client-service": ${spring.application.name}
 
