@@ -13,6 +13,10 @@ management:
       exposure:
         include: '*'
         base-path: /actuator
+# Enable zipkin traces
+  tracing:
+    sampling:
+      probability: 1.0
 
 #Actuator configuration
 info:
@@ -20,3 +24,13 @@ info:
     name: Product Service
     description: Product Service
     version: 0.0.1
+
+# Logging configuration
+logging:
+  level:
+    org:
+      springframework:
+        web: ALL
+    com:
+      mitocode:
+        microservices: ALL    
