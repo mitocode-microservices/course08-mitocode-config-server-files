@@ -48,28 +48,6 @@ resilience4j:
       retry-product:
         baseConfig: retry-product
 
-# Enable actuator
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-        base-path: /actuator
-  otlp:
-    tracing:
-      endpoint: http://localhost:4318/v1/traces
-      timeout: 10s
-    metrics:
-      export:
-        url: http://localhost:4318/v1/metrics
-        step: 5s
-  opentelemetry:
-    resourceAttributes."service-name": ${spring.application.name}
-  tracing:
-    sampling:
-      probability: 1
-
-
 mitocode:
   circuit-breaker:
     common:
