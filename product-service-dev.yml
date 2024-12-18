@@ -30,3 +30,18 @@ springdoc:
   swagger-ui:
     enabled: false
     path: /openapi.yml
+
+#Enable Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        base-path: /actuator
+
+#Actuator configuration
+info:
+  app:
+    name: Client Service Ribbon
+    description: Cliente con Ribbon
+    version: 0.0.1
