@@ -16,7 +16,7 @@ management:
 # Enable zipkin traces
   tracing:
     sampling:
-      probability: 1.0
+      probability: 0.1
 
 #Actuator configuration
 info:
