@@ -30,3 +30,21 @@ springdoc:
   swagger-ui:
     enabled: false
     path: /openapi.yml
+
+
+# Otel Config
+
+otel:
+  logs:
+    exporter: otlp
+  metrics:
+    exporter: otlp
+  traces:
+    exporter: otlp
+
+  metric:
+    export:
+      interval: 1000
+  instrumentation:
+    micrometer:
+      enabled: true
