@@ -42,6 +42,6 @@ management:
 #Actuator configuration
 info:
   app:
-    name: Client Service Ribbon
-    description: Cliente con Ribbon
+    name: Product Service
+    description: Product Service
     version: 0.0.1
