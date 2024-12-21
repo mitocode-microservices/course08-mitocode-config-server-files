@@ -48,3 +48,10 @@ otel:
   instrumentation:
     micrometer:
       enabled: true
+
+# Kafka properties
+kafka:
+  mitocode:
+    server: localhost
+    topic: mitocode
+    port: 9092
