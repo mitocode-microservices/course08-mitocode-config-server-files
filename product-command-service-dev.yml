@@ -1,6 +1,7 @@
 server:
   port: ${CUSTOM.SERVER.PORT:9021}
 
+spring:
 # Postgres Configuration
   jpa:
     databasePlatform:
