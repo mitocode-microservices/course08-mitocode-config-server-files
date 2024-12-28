@@ -71,7 +71,7 @@
             uri: lb://product-query-service
             predicates:
               - Path=/api/product-query/**
-              - Weight=product-service, 9
+              - Weight=product-service, 5
             filters:
               - StripPrefix=2
 
@@ -79,7 +79,7 @@
             uri: lb://product-query-service-v2
             predicates:
               - Path=/api/product-query/**
-              - Weight=product-service, 1
+              - Weight=product-service, 5
             filters:
               - StripPrefix=2
 
