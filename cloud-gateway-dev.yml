@@ -67,6 +67,23 @@ spring:
             - StripPrefix=2
             - AddRequestParameter=email,mitocode@mitocode.com
 
+
+        - id: product-query-v1-service-route # 9022
+                uri: lb://product-query-service
+                predicates:
+                  - Path=/api/product-query/**
+                  - Weigth=product-service, 0.9
+                filters:
+                  - StripPrefix=2
+
+        - id: product-query-v2-service-route # 7099
+                uri: lb://product-query-service-v2
+                predicates:
+                  - Path=/api/product-query/**
+                  - Weigth=product-service, 0.1
+                filters:
+                  - StripPrefix=2
+
 management:
   endpoints:
     web:
